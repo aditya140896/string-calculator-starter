@@ -3,11 +3,10 @@ package calculator;
 class StringCalculator {
 
     public int add(String input) {
+    	if(input.length()==0)
         return 0;
+    	else
+    		return 1;
     }
-    public int add(String input1, String input2) {
-    	int i1= Integer.parseInt(input1);
-    	int i2= Integer.parseInt(input2);
-    	return i1+i2;
-    }
+    
 }
