@@ -5,22 +5,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
+	StringCalculator stringCalculator = new StringCalculator();
+    @Test
+    void shouldcalc() {
+        checkAdd("",0);
+        checkAdd("1",1);
+        checkAdd("2",2);
+        checkAdd("1,2",3);
+      
+    }
+	private void checkAdd(String string, int i) {
+		assertEquals(i,stringCalculator.add(string));
+		
+	}
 
-    @Test
-    void empty_string_should_return_0() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(0, stringCalculator.add(""));
-    }
-
-    @Test
-    void string_with_single_number_should_return_number_as_int() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1, stringCalculator.add("1"));
-    }
-    
-    @Test
-    void string_with_single_number_should_return_number_withDelimiter() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1, stringCalculator.add("1,2"));
-    }
+   
 }
