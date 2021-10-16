@@ -12,6 +12,9 @@ class StringCalculatorShould {
         checkAdd("1",1);
         checkAdd("2",2);
         checkAdd("1,2",3);
+        checkAdd("1\n2",3);
+        checkAdd("//;1;2;3",6);
+        
       
     }
 	private void checkAdd(String string, int i) {
